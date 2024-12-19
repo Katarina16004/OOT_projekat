@@ -1,0 +1,146 @@
+﻿<Window x:Class="projekat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projekat"
+        mc:Ignorable="d"
+        Title="Drustvena mreza" Height="780" Width="550"
+        WindowState="Maximized">
+
+    <Grid>
+        <TabControl Name="tabC">
+            <TabItem Header="Pregled profila i postova">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="10">
+                    <Image Name="slika" Margin="3" Source="{Binding Profilna_slika}" Width="100" Height="100" MouseLeftButtonUp="slika_MouseLeftButtonUp"></Image>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="izmenisliku" Margin="150 0 2 0" Grid.Column="0" MouseDoubleClick="izmenisliku_MouseDoubleClick">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF9FE8D3" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background> Izmeni sliku
+                        </Button>
+                        <Button Name="obrisisliku" Margin="5 0 150 0" Grid.Column="1" MouseDoubleClick="obrisisliku_MouseDoubleClick">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF9FE8D3" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background> Obrisi sliku
+                        </Button>
+                    </Grid>
+                    <Grid Margin="60 7">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Name="imeprikaz" HorizontalAlignment="Right" Margin="0 0 5 0" FontWeight="Bold" FontSize="20"></TextBlock>
+                        <TextBlock Name="prezimeprikaz" Grid.Column="1" HorizontalAlignment="Left" FontWeight="Bold" FontSize="20" Margin="5 0 0 0"></TextBlock>
+                    </Grid>
+                    <Grid x:Name="PodaciOKorisniku">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Name="id" Grid.Column="1" Grid.Row="0" Text="{Binding Id}"></TextBlock>
+                        <TextBlock Name="ime" Grid.Column="1" Grid.Row="1" Text="{Binding Ime}"></TextBlock>
+                        <TextBlock Name="prezime" Grid.Column="1" Grid.Row="2" Text="{Binding Prezime}"></TextBlock>
+                        <TextBlock Name="datum" Grid.Column="1" Grid.Row="3" Text="{Binding Datum_rodjenja}"></TextBlock>
+                        <TextBlock Name="brprijatelja" Grid.Column="1" Grid.Row="4" Text="{Binding PrijateljiCount}"></TextBlock>
+                        <TextBlock Name="brobjava" Grid.Column="1" Grid.Row="5" Text="{Binding ObjaveCount}"></TextBlock>
+                        <TextBlock>ID korisnika:</TextBlock>
+                        <TextBlock Grid.Row="1">Ime:</TextBlock>
+                        <TextBlock Grid.Row="2">Prezime:</TextBlock>
+                        <TextBlock Grid.Row="3">Datum rodjenja:</TextBlock>
+                        <TextBlock Grid.Row="4">Broj prijatelja:</TextBlock>
+                        <TextBlock Grid.Row="5">Broj objava:</TextBlock>
+                    </Grid>
+                    <TextBlock FontWeight="Bold" Margin="10">Objave:</TextBlock>
+                    <ListView Background="Azure" Name="PostListView" ItemsSource="{Binding Postovi}" Height="350" SelectionChanged="PostListView_SelectionChanged"
+                              AllowDrop="True" DragEnter="PostListView_DragEnter" Drop="PostListView_Drop" PreviewMouseMove="PostListView_PreviewMouseMove" PreviewMouseLeftButtonDown="PostListView_PreviewMouseLeftButtonDown">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel Tag="{Binding Id_posta}">
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="ID posta: " FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding Id_posta}"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="ID korisnika: " FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding Id_korisnika}"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Broj lajkova: " FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding Lajkovi}"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Sadrzaj: " FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding Sadrzaj}"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Grid Margin="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Button x:Name="dodaj" Margin="2" MouseDoubleClick="dodaj_MouseDoubleClick" >
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF9FE8D3" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background> Dodaj post
+                        </Button>
+                        <Button x:Name="obrisi" Grid.Column="1" Margin="2" MouseDoubleClick="obrisi_MouseDoubleClick" IsEnabled="False">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF9FE8D3" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background> Obrisi post
+                        </Button>
+                        <Button x:Name="uredi" Grid.Column="2" Margin="2" MouseDoubleClick="uredi_MouseDoubleClick" IsEnabled="false">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF9FE8D3" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background> Uredi post
+                        </Button>
+                    </Grid>
+                </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Mreza prijatelja" >
+                <local:Tab2></local:Tab2>
+            </TabItem>
+            <TabItem Header="Grupne diskusije">
+                <local:Tab3></local:Tab3>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

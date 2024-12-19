@@ -1,0 +1,8 @@
+5,Mirko,Vasic,30.12.1987.,fajlovi\image\musko2.jpg
+
+f,2
+
+f,5
+
+f,6
+

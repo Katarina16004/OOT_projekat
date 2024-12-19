@@ -1,0 +1,12 @@
+9,Janko,Radic,01.01.2000.,fajlovi\image\user.jpg
+
+f,1
+
+f,2
+
+f,4
+
+f,5
+
+f,8
+

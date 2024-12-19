@@ -1,0 +1,5 @@
+1,Geeks,Prva grupa fokusirana na istrazivanje tehnologije,3,7,2,10
+2,Biomedicinari,Tim specijalizovan za biomedicinska istrazivanja,4,8,10,11
+3,Menza Novi Sad,Grupa koja se bavi razvojem softverskih resenja,6,9,3,5
+4,Istrazivaca,Odeljenje za ekoloske studije i istrazivanja,2,5,7
+5,Trendz,Tim za analizu ekonomskih trendova,10,3,8,4

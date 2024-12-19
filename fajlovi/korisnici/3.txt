@@ -1,0 +1,12 @@
+3,Kristina,Miljkovic,03.02.1992.,fajlovi\image\zensko1.jpg
+
+f,1
+
+f,2
+
+f,4
+
+f,8
+
+f,10
+

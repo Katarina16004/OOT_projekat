@@ -1,0 +1,46 @@
+﻿<Window x:Class="projekat.PromeniSliku"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projekat"
+        mc:Ignorable="d"
+        Title="PromeniSliku" Height="430" Width="300">
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Button Name="musko1slika" Width="70" Height="70" Margin="10" MouseDoubleClick="musko1slika_MouseDoubleClick"></Button>
+                <Button Name="musko2slika" Width="70" Height="70" Margin="10" Grid.Row="1" MouseDoubleClick="musko2slika_MouseDoubleClick"></Button>
+                <Button Name="musko3slika" Width="70" Height="70" Margin="10" Grid.Column="1" MouseDoubleClick="musko3slika_MouseDoubleClick"></Button>
+                <Button Name="zensko1slika" Width="70" Height="70" Margin="10" Grid.Column="1" Grid.Row="1" MouseDoubleClick="zensko1slika_MouseDoubleClick"></Button>
+                <Button Name="zensko2slika" Width="70" Height="70" Margin="10" Grid.Column="0" Grid.Row="2" MouseDoubleClick="zensko2slika_MouseDoubleClick"></Button>
+                <Button Name="zensko3slika" Width="70" Height="70" Margin="10" Grid.Column="1" Grid.Row="2" MouseDoubleClick="zensko3slika_MouseDoubleClick"></Button>
+                <Button Name="zensko4slika" Width="70" Height="70" Margin="10" Grid.Column="0" Grid.Row="3" MouseDoubleClick="zensko4slika_MouseDoubleClick" ></Button>
+                <Button Name="izaberiSaRacunara" Width="70" Height="70" Margin="10" Grid.Column="1" Grid.Row="3" MouseDoubleClick="izaberiSaRacunara_MouseDoubleClick" >
+                    <StackPanel>
+                        <Image Source="../../fajlovi/image/camera.png" Width="50"></Image>
+                        <TextBlock HorizontalAlignment="Center"> Uvezi </TextBlock>
+                    </StackPanel>
+                </Button>
+                
+                <!-- Potvrdi ili odustani -->
+                <Button Name="odustani" Margin="10 10 10 0" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="4"  MouseDoubleClick="odustani_MouseDoubleClick" >Odustani</Button>
+                <Button Name="postavi" Margin="10 10 10 0" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="4" MouseDoubleClick="postavi_MouseDoubleClick">Sacuvaj</Button>
+
+            </Grid>
+            
+        </StackPanel>
+    </Grid>
+</Window>

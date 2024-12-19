@@ -1,0 +1,20 @@
+1,Diskusija o napredovanju racunara,02.06.2024.,1
+2,Uticaj AI na softverski razvoj,03.06.2024.,1
+3,Nove tehnologije u 2024,04.06.2024.,1
+4,Future of Tech Startups,05.06.2024.,1
+5,Biomedicinska istrazivanja i razvoj,01.06.2024.,2
+6,Genetska istrazivanja i inovacije,02.06.2024.,2
+7,Primena biotehnologije u medicini,03.06.2024.,2
+8,Eticki izazovi u biomedicini,04.06.2024.,2
+9,Razvoj softverskih resenja u menzi,03.06.2024.,3
+10,Optimizacija softverskih sistema,04.06.2024.,3
+11,Nove aplikacije za studentsku menzu,05.06.2024.,3
+12,Digitalizacija usluga u obrazovanju,06.06.2024.,3
+13,Ekoloski izazovi danasnjice,04.06.2024.,4
+14,Odrzivi razvoj i ekologija,05.06.2024.,4
+15,Uticaj klimatskih promena,06.06.2024.,4
+16,Zastita prirodnih resursa,07.06.2024.,4
+17,Analiza ekonomskih trendova,05.06.2024.,5
+18,Ekonomske prognoze za 2024,06.06.2024.,5
+19,Uticaj globalne ekonomije na lokalna trzista,07.06.2024.,5
+20,Finansijska stabilnost i inovacije,08.06.2024.,5

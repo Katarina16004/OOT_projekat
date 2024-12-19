@@ -1,0 +1,42 @@
+﻿<Window x:Class="projekat.DodajDiskusiju"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projekat"
+        mc:Ignorable="d"
+        Title="Dodaj diskusiju" Height="200" Width="400">
+    <Grid>
+        <StackPanel>
+            <TextBlock>Unesite sve potrebne informacije o diskusiji:</TextBlock>
+           
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button x:Name="objavipost" Margin="5" Width="70" IsEnabled="False" MouseDoubleClick="objavipost_MouseDoubleClick">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF9FE8D3" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background> Dodaj </Button>
+                <Button x:Name="odustanipost" Grid.Column="1" Margin="5" Width="70" MouseDoubleClick="odustanipost_MouseDoubleClick">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF9FE8D3" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background> Odustani</Button>
+            </Grid>
+            <StackPanel>
+                <TextBlock Margin="5">Unesite naziv grupe:</TextBlock>
+                <TextBox   Margin="5" x:Name="naziv" VerticalScrollBarVisibility="Auto" TextChanged="TextChanged"></TextBox>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

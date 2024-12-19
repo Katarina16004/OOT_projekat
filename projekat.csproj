@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="image\**" />
+    <EmbeddedResource Remove="image\**" />
+    <None Remove="image\**" />
+    <Page Remove="image\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="fajlovi\image\camera.png" />
+    <None Remove="fajlovi\image\like.png" />
+    <None Remove="fajlovi\image\musko1.jpg" />
+    <None Remove="fajlovi\image\musko2.jpg" />
+    <None Remove="fajlovi\image\musko3.jpg" />
+    <None Remove="fajlovi\image\person-7806352_960_720.png" />
+    <None Remove="fajlovi\image\remove-user.png" />
+    <None Remove="fajlovi\image\user.jpg" />
+    <None Remove="fajlovi\image\zensko1.jpg" />
+    <None Remove="fajlovi\image\zensko2.jpg" />
+    <None Remove="fajlovi\image\zensko3.jpg" />
+    <None Remove="fajlovi\image\zensko4.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="fajlovi\image\camera.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fajlovi\image\like.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fajlovi\image\musko1.jpg" />
+    <Resource Include="fajlovi\image\musko2.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fajlovi\image\musko3.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fajlovi\image\person-7806352_960_720.png" />
+    <Resource Include="fajlovi\image\remove-user.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fajlovi\image\user.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fajlovi\image\zensko1.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fajlovi\image\zensko2.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fajlovi\image\zensko3.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fajlovi\image\zensko4.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

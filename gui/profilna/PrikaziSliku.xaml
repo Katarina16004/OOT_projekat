@@ -1,0 +1,19 @@
+﻿<Window x:Class="projekat.PrikaziSliku"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projekat"
+        mc:Ignorable="d"
+        Title="PrikaziSliku" Height="320" Width="320">
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="Black">
+            <Grid>
+                <!-- Postavite sliku kao pozadinu ovog Grid-a -->
+                <Grid.Background>
+                    <ImageBrush x:Name="prikazImage" Stretch="UniformToFill"/>
+                </Grid.Background>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
