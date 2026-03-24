@@ -1,43 +1,39 @@
-# DruštvenaMreža
+# Social Network
 
-## 📌 Opis aplikacije
+## 📌 Application Overview
 
-WPF desktop aplikacija koja simulira društvenu mrežu i omogućava korisnicima:
-- pregled i uređivanje sopstvenog profila i postova,
-- pregled i upravljanje prijateljima (dodavanje, brisanje, pretraga),
-- učestvovanje u grupnim diskusijama.
+A WPF desktop application that simulates a social network and allows users to:
+- view and edit their own profile and posts,
+- view and manage friends (add, remove, search),
+- participate in group discussions.
 
-Svi podaci se trajno čuvaju u datotekama, a izmene se zapisuju i učitavaju prilikom sledećeg pokretanja.
-
----
-
-## 🧩 Funkcionalnosti po tabovima
-
-### 🟦 1. **Profil i postovi**
-- Prikaz informacija o korisniku (ime, prezime, datum rođenja, profilna slika).
-- Lista postova prikazana u tabeli (sadržaj, datum objave, broj lajkova).
-- Drag & drop za promenu redosleda postova.
-- Dodavanje, uređivanje i brisanje postova.
-- Mogućnost menjanja profilne slike.
+All data is persistently stored in files, and changes are saved and loaded on the next application startup.
 
 ---
 
-### 🟩 2. **Mreža prijatelja**
-- Prikaz liste prijatelja.
-- Klikom na prijatelja prikazuje se njegov profil i postovi.
-- Dodavanje i uklanjanje prijatelja.
-- Pretraga i filtriranje prijatelja po:
-  - imenu, prezimenu, datumu rođenja
-  - sadržaju postova.
+## 🧩 Tab-Based Features
+
+### 🟦 1. **Profile & Posts**
+- Displays user information (first name, last name, date of birth, profile picture).
+- Posts list shown in a table (content, publish date, number of likes).
+- Drag & drop support to reorder posts.
+- Add, edit, and delete posts.
+- Option to change the profile picture.
 
 ---
 
-### 🟨 3. **Grupne diskusije**
-- Lista grupa u kojima korisnik učestvuje.
-- Prikaz diskusija po grupama (naziv, broj članova, datum poslednje poruke).
-- Kreiranje, uređivanje i brisanje grupa i diskusija.
-- Izvoz tabele diskusija u fajl.
+### 🟩 2. **Friends Network**
+- Displays the friends list.
+- Clicking a friend shows their profile and posts.
+- Add and remove friends.
+- Search and filter friends by:
+  - first name, last name, date of birth
+  - post content.
 
 ---
 
-
+### 🟨 3. **Group Discussions**
+- List of groups the user participates in.
+- Displays discussions per group (title, number of members, last message date).
+- Create, edit, and delete groups and discussions.
+- Export the discussions table to a file.
